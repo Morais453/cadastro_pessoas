@@ -147,6 +147,17 @@
       <set>AlignCenter</set>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>USUARIO</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </column>
    </widget>
    <widget class="QPushButton" name="btnAlterarRegistro">
     <property name="geometry">

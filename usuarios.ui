@@ -32,11 +32,33 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>30</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CADASTRO DE USUÁRIO</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>190</y>
+      <y>60</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -54,9 +76,9 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>190</y>
-      <width>251</width>
+      <x>100</x>
+      <y>220</y>
+      <width>211</width>
       <height>31</height>
      </rect>
     </property>
@@ -67,14 +89,14 @@
      </font>
     </property>
     <property name="text">
-     <string>Endereço</string>
+     <string>Senha</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>280</y>
+      <y>140</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -86,14 +108,14 @@
      </font>
     </property>
     <property name="text">
-     <string>Telefone</string>
+     <string>Email</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtAlterarNome">
+   <widget class="QLineEdit" name="txtNomeUsuario">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>220</y>
+      <y>90</y>
       <width>281</width>
       <height>41</height>
      </rect>
@@ -104,11 +126,11 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtAlterarTelefone">
+   <widget class="QLineEdit" name="txtEmailUsuario">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>310</y>
+      <y>170</y>
       <width>281</width>
       <height>41</height>
      </rect>
@@ -119,11 +141,11 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtAlterarEndereco">
+   <widget class="QLineEdit" name="txtSenhaUsuario">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>220</y>
+      <x>100</x>
+      <y>250</y>
       <width>281</width>
       <height>41</height>
      </rect>
@@ -134,11 +156,11 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnConfirmarAlteracao">
+   <widget class="QPushButton" name="btnCadastrarUsuario">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>410</y>
+      <x>580</x>
+      <y>200</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -156,24 +178,49 @@
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>CONFIRMAR</string>
+     <string>Adicionar</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lblMsg">
+   <widget class="QPushButton" name="btnExcluirUsuario">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>470</y>
-      <width>631</width>
-      <height>51</height>
+      <x>580</x>
+      <y>320</y>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial Black</family>
-      <pointsize>12</pointsize>
+      <pointsize>10</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Excluir</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblMsg">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>90</y>
+      <width>341</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -183,27 +230,12 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtAlterarTipoServico">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>310</y>
-      <width>281</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>280</y>
-      <width>281</width>
+      <x>100</x>
+      <y>300</y>
+      <width>261</width>
       <height>31</height>
      </rect>
     </property>
@@ -214,115 +246,123 @@ color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="text">
-     <string>Tipo de Serviço</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     <string>Andamento do Serviço</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QComboBox" name="comboBoxTipoUsuario">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>100</y>
-      <width>281</width>
+      <y>340</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>ID</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <item>
+     <property name="text">
+      <string>Usuário</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Administrador</string>
+     </property>
+    </item>
    </widget>
-   <widget class="QLineEdit" name="txtAlterarId">
+   <widget class="QPushButton" name="btnListarUsuarios">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>130</y>
-      <width>281</width>
+      <x>580</x>
+      <y>260</y>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
-    <property name="readOnly">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Listar</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>390</y>
+      <width>491</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBoxAlterarStatus">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>140</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <item>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>120</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <column>
      <property name="text">
-      <string>Em Andamento</string>
+      <string>Nome</string>
      </property>
-    </item>
-    <item>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
      <property name="text">
-      <string>Concluído</string>
+      <string>Email</string>
      </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>100</y>
-      <width>281</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Status do Processo</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>20</y>
-      <width>401</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>EDITAR CADASTRO</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>TIPO</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

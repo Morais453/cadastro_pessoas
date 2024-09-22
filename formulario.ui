@@ -48,7 +48,7 @@
      </font>
     </property>
     <property name="text">
-     <string>CADASTRO DE PESOSAS</string>
+     <string>CADASTRO DE PESSOAS</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -209,16 +209,16 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="lblMsg">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>470</x>
       <y>400</y>
-      <width>341</width>
+      <width>311</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial Black</family>
-      <pointsize>12</pointsize>
+      <pointsize>10</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
